@@ -1,4 +1,7 @@
 pipeline {
+	parameters {
+		string(defaultValue: 'master', description: 'branch to build', name: 'branch', trim: true)
+	}
     agent {
         docker {
             image 'maven:3-alpine' 
